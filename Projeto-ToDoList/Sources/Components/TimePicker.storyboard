@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Time Picker Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TimePickerController" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="TimePickerController" customModule="Projeto_ToDoList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPX-i8-Ozt">
+                                <rect key="frame" x="0.0" y="586" width="414" height="276"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cn6-w5-BQz">
+                                        <rect key="frame" x="349" y="5" width="60" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="mmT-uY-jMd"/>
+                                            <constraint firstAttribute="height" constant="30" id="ppi-y0-sxz"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="OK">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dKt-OX-LOi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2U0-P1-co4">
+                                        <rect key="frame" x="5" y="5" width="80" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Mll-p4-uAK"/>
+                                            <constraint firstAttribute="width" constant="80" id="qkZ-KP-J5y"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="close:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="iJD-9J-B6a"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="VCq-Cf-SHR">
+                                        <rect key="frame" x="40" y="64" width="334" height="162"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="162" id="zuK-FD-TVT"/>
+                                        </constraints>
+                                        <locale key="locale" localeIdentifier="pt_BR"/>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="VCq-Cf-SHR" secondAttribute="trailing" constant="40" id="0Lq-Cl-DqO"/>
+                                    <constraint firstAttribute="bottom" secondItem="VCq-Cf-SHR" secondAttribute="bottom" constant="50" id="LI1-Kc-KqI"/>
+                                    <constraint firstItem="2U0-P1-co4" firstAttribute="leading" secondItem="vPX-i8-Ozt" secondAttribute="leading" constant="5" id="UDf-an-7tU"/>
+                                    <constraint firstAttribute="trailing" secondItem="cn6-w5-BQz" secondAttribute="trailing" constant="5" id="aR9-Uy-hrE"/>
+                                    <constraint firstItem="cn6-w5-BQz" firstAttribute="top" secondItem="vPX-i8-Ozt" secondAttribute="top" constant="5" id="abv-T5-KUE"/>
+                                    <constraint firstItem="2U0-P1-co4" firstAttribute="top" secondItem="vPX-i8-Ozt" secondAttribute="top" constant="5" id="jMO-7y-yeV"/>
+                                    <constraint firstItem="VCq-Cf-SHR" firstAttribute="leading" secondItem="vPX-i8-Ozt" secondAttribute="leading" constant="40" id="tXT-IV-a0v"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.5" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vPX-i8-Ozt" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ITb-fJ-FBe"/>
+                            <constraint firstItem="vPX-i8-Ozt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LRP-fo-CfK"/>
+                            <constraint firstItem="vPX-i8-Ozt" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="NDm-lI-To2"/>
+                            <constraint firstItem="vPX-i8-Ozt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="542" id="WZ0-jl-8xL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCancel" destination="2U0-P1-co4" id="jPz-G8-aKF"/>
+                        <outlet property="btnOk" destination="cn6-w5-BQz" id="FNl-XQ-CfQ"/>
+                        <outlet property="datePicker" destination="VCq-Cf-SHR" id="ty9-ZH-SN8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
