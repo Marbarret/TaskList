@@ -8,8 +8,6 @@
 import UIKit
 
 class ListTaskViewController: UIViewController {
-
-    // MARK: - Properties
     
     // MARK: - Outlets
 
@@ -24,8 +22,6 @@ class ListTaskViewController: UIViewController {
         tableListTask.delegate = self
         tableListTask.dataSource = self
     }
-    
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

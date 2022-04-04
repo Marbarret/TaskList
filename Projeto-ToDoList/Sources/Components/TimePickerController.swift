@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TimePickerProtocol {
-    func sendTime (_ time: String)
+    func sendTime(_ time: String)
 }
 
 class TimePickerController: UIViewController {
